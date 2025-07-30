@@ -18,12 +18,12 @@ pub fn generate(args: Vec<String>) {
             }
 
             match parts[0] {
-                "l" | "len" | "length" => {
+                "l" | "len" | "length" | "-l" | "--len" | "--length" => {
                     if let Ok(l) = parts[1].parse::<i8>() {
                         length = l;
                     }
                 },
-                "c" | "count" => {
+                "c" | "count" | "-c" | "--count" => {
                     if let Ok(c) = parts[1].parse::<i8>() {
                         count = c;
                     }
